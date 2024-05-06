@@ -41,7 +41,7 @@ jobs:
           git status
           # 更改此远程URL，例如查看您的远程URL是 https://github.com/JKE7-supplier/flutter_web_actions_build.git 然后改成以下内容
           git remote add origin https://${{secrets.commit_secret}}git@github.com:JKE7-supplier/flutter_web_actions_build.git
-          git checkout -b gh-pages
+          git checkout -b master
           git add --all
           git commit -m "update"
-          git push origin gh-pages -f
+          git push origin master -f
