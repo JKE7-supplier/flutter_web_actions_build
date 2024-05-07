@@ -1,16 +1,6 @@
 # flutter_web_actions_build
 
-A new Flutter project.
+这是一个flutter项目，演示GitHub actions部署，具体详情可查看
+关联文档：https://blog.csdn.net/qq_22904065/article/details/138525409
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
