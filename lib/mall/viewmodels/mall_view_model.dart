@@ -30,7 +30,6 @@ class MallViewModel extends BaseViewModel {
 
   fetchACPConfiguration() async {
     // showFullScreenLoading(context);
-
     try {
       await Future.delayed(const Duration(milliseconds: 20));
 
