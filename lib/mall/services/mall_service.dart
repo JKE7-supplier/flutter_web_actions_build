@@ -5,8 +5,8 @@ import 'package:flutter_web_actions_build/network/base_service.dart';
 class MallService extends BaseService {
   Future<MallResponse> fetchACPConfiguration() async {
     try {
-      Response res = await getJson(
-          "/shdr-acp-java/api/v1/f3c36826f4a3e93e/content?language=zh", null);
+      // Response res = await getJson("/shdr-acp-java/api/v1/f3c36826f4a3e93e/content?language=zh", null);
+      Response res = await getJson("/api/mall/poc", null);
       List list = res.data;
       MallResponse _response = MallResponse();
       if (list.isEmpty) {
