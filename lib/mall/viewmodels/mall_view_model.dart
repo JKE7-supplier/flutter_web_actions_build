@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web_actions_build/mall/services/mall_response.dart';
 import 'package:flutter_web_actions_build/mall/viewmodels/mall_get_api_view_model.dart';
 import 'package:flutter_web_actions_build/viewmodel/base_view_model.dart';
+import 'package:flutter_web_actions_build/widgets/loading_widget.dart';
 
 class MallViewModel extends BaseViewModel {
   final _mallGetApiViewModel = MallGetApiViewModel();
@@ -30,8 +31,18 @@ class MallViewModel extends BaseViewModel {
 
   fetchACPConfiguration() async {
     // showFullScreenLoading(context);
+
+    showDialog(
+        context: context,
+        barrierColor: Colors.transparent,
+        barrierDismissible: false,
+        builder: (BuildContext context){
+      return const LoadingWidget("加载中...");
+    });
+
+
     try {
-      await Future.delayed(const Duration(milliseconds: 20));
+      // await Future.delayed(const Duration(milliseconds: 20));
 
       MallResponse response = await _mallGetApiViewModel.fetchACPConfiguration();
       if (response.isSuccess && response.bean != null) {
@@ -70,6 +81,7 @@ class MallViewModel extends BaseViewModel {
       }
     } finally {
       // dismissLoading(context);
+      Navigator.pop(context);
     }
   }
 }
